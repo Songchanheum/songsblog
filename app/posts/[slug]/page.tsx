@@ -31,6 +31,7 @@ const PostPage = (props: any) => {
         <p className="text-slate-400 mt-2">{matterResult.data.date}</p>
         {matterResult.data.baseimage ? (
           <Image
+            alt=""
             src={`/images/baseImage/${matterResult.data.baseimage}`}
             width={400}
             height={280}
