@@ -18,7 +18,9 @@ const getPostMetadata = (): PostMetadata[] => {
     };
   });
 
-  return posts;
+  return posts.sort((a, b) =>
+    a.date.toLowerCase() < b.date.toLowerCase() ? 1 : -1
+  );
 };
 
 export default getPostMetadata;
