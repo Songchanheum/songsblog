@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "../styles/globals.css";
+import IntroduceMenu from "@/components/IntroduceMenu";
 
 export const metadata = {
   title: "Song`s Blog",
@@ -13,12 +14,17 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
+      <div className="text-center bg-slate-800 p-8 mt-6 rounded-md">
         <Link href={`/`}>
-          <h1 className="text-2xl text-white font-bold mt-4">Song's Blog</h1>
+          <h1 className="text-2xl text-white font-bold mt-4 mb-3">
+            Song's Blog
+          </h1>
         </Link>
-        <p className="text-slate-300"> NextJS Blog</p>
+        <p className="text-slate-300 text-sm">
+          NextJS 와 TailwindCSS 로 구성되어 있습니다.
+        </p>
       </div>
+      <IntroduceMenu />
     </header>
   );
   const footer = (

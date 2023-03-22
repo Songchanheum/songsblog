@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        programmers: "#202B3D",
+        "programmers-hover": "#202B5F",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

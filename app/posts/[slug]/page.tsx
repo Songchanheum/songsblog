@@ -28,7 +28,7 @@ const PostPage = (props: any) => {
         <h1 className="text-2xl text-violet-600 font-bold text-center">
           {matterResult.data.title}
         </h1>
-        <p className="text-slate-400 mt-2">{matterResult.data.date}</p>
+        <p className="text-slate-400 mt-2 mb-3">{matterResult.data.date}</p>
         {matterResult.data.baseimage ? (
           <Image
             alt=""
