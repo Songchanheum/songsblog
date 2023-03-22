@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../styles/globals.css";
 
 export const metadata = {
   title: "Song`s Blog",
@@ -12,18 +13,29 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div>
+      <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
         <Link href={`/`}>
-          <h1>Song's Blog</h1>
+          <h1 className="text-2xl text-white font-bold mt-4">Song's Blog</h1>
         </Link>
+        <p className="text-slate-300"> NextJS Blog</p>
       </div>
     </header>
+  );
+  const footer = (
+    <footer>
+      <div className="border-t border-slate-400 mt-8 py-6 text-center text-slate-400">
+        <h3>Developed by Chanheum Song</h3>
+      </div>
+    </footer>
   );
   return (
     <html lang="en">
       <body>
-        {header}
-        {children}
+        <div className="mx-auto md:max-w-2xl lg:max-w-4xl px-6">
+          {header}
+          {children}
+          {footer}
+        </div>
       </body>
     </html>
   );
