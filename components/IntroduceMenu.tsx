@@ -39,7 +39,7 @@ const IntroduceMenu = () => {
               height={22}
               className="mr-2"
             />
-            Programmers
+            Resume
           </button>
         </Link>
         <Link href={`https://github.com/Songchanheum`}>
@@ -76,7 +76,7 @@ const IntroduceMenu = () => {
         >
           <button
             type="button"
-            className="inline-flex items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
           >
             <MdComputer size="22" />
           </button>
@@ -84,7 +84,7 @@ const IntroduceMenu = () => {
         <Link href={"https://career.programmers.co.kr/pr/softsch1_9949"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-programmers hover:bg-programmers-hover border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center text-white bg-programmers hover:bg-programmers-hover border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
           >
             <Image alt="" src="/programmers.png" width={22} height={22} />
           </button>
@@ -92,7 +92,7 @@ const IntroduceMenu = () => {
         <Link href={`https://github.com/Songchanheum`}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-gray-900 hover:bg-black border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center text-white bg-gray-900 hover:bg-black border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
           >
             <FiGithub size="22" />
           </button>
@@ -100,7 +100,7 @@ const IntroduceMenu = () => {
         <Link href={"https://www.instagram.com/songch_/"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-pink-400 hover:bg-pink-500 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center text-white bg-pink-400 hover:bg-pink-500 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
           >
             <FiInstagram size="22" />
           </button>
