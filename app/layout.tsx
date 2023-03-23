@@ -15,13 +15,18 @@ export default function RootLayout({
   const header = (
     <header>
       <div className="text-center bg-slate-700 p-8 mt-6 rounded-md">
-        <Link href={`/`}>
-          <h1 className="text-2xl text-white font-bold mt-4 mb-3">
-            Song's Blog
-          </h1>
-        </Link>
+        <div className="group relative mt-4 mb-3 flex justify-center">
+          <h1 className="text-2xl text-white font-bold ">Song's Blog</h1>
+          <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-left text-xs text-white group-hover:scale-100">
+            ✨ 7년차 WEB 개발자
+            <br />✨ 3년차 Front-end 개발자
+            <br />✨ (주)알티모빌리티 근무 중
+            <br />✨ 이 Web은 NextJS/Typescript 와 TailwindCSS 로 구성되어
+            있습니다.
+          </span>
+        </div>
         <p className="text-slate-300 text-xs sm:text-sm">
-          NextJS 와 TailwindCSS 로 구성되어 있습니다.
+          송찬흠의 Dev Blog 입니다! (2021-08 ~ 진행중)
         </p>
       </div>
       <IntroduceMenu />
