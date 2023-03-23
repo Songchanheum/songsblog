@@ -21,7 +21,7 @@ export default function RootLayout({
             ✨ 7년차 WEB 개발자
             <br />✨ 3년차 Front-end 개발자
             <br />✨ (주)알티모빌리티 근무 중
-            <br />✨ 이 Web은 NextJS/Typescript 와 TailwindCSS 로 구성되어
+            <br />✨ 이 Blog Web은 NextJS/Typescript 와 TailwindCSS 로 구성되어
             있습니다.
           </span>
         </div>

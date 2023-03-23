@@ -6,7 +6,7 @@ import Link from "next/link";
 const IntroduceMenu = () => {
   return (
     <>
-      <div className="hidden lg:flex flex-start bg-gray-100 p-2 mb-6 rounded-md">
+      <div className="hidden lg:flex flex-start bg-gray-100 p-2 mb-3 rounded-md">
         <Link href={`/`}>
           <button
             type="button"
