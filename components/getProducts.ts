@@ -1,8 +1,8 @@
 import getPostMetadata from "./getPostMetadata";
 
 export default async function getProducts({
-  limit,
-  page,
+  limit = 1,
+  page = 1,
 }: {
   limit: number;
   page: number;

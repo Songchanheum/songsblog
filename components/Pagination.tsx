@@ -33,7 +33,7 @@ const Pagination = ({
             key={i}
             href={renderPageLink(pageNumber as number)}
             className={`${
-              pageNumber === currentPage ? "text-success-dark" : "text-black"
+              pageNumber === currentPage ? "text-blue-600" : "text-black"
             } px-4 py-2 mx-1 rounded-full text-sm font-semibold no-underline`}
           >
             {pageNumber}
