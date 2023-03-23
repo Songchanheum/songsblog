@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { FiGrid, FiList } from "react-icons/fi";
 export const dynamicParams = true;
-const PER_PAGE = 1;
+const PER_PAGE = 10;
 
 const productPaging = async (props: any) => {
   const page = Number(props?.page) || 1;
@@ -35,6 +35,7 @@ async function PaginatedPage(props: any) {
       date={post.date}
       subtitle={post.subtitle}
       slug={post.slug}
+      baseimage={post.baseimage}
       temp={tempState}
     />
   ));
@@ -94,7 +95,6 @@ export const generateStaticParams = async () => {
       page: String(i + 1),
     })
   );
-  console.log(list.concat(grid));
   return list.concat(grid);
 };
 

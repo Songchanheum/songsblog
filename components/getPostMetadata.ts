@@ -14,6 +14,7 @@ const getPostMetadata = (): PostMetadata[] => {
       title: matterResult.data.title,
       subtitle: matterResult.data.subtitle,
       date: matterResult.data.date,
+      baseimage: matterResult.data.baseimage,
       slug: fileName.replace(".md", ""),
       temp: "",
     };
