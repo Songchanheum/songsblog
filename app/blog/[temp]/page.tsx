@@ -1,20 +1,12 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import Pagination from "@/components/Pagination";
-import getPostMetadata from "@/components/getPostMetadata";
 import PostPreview from "@/components/PostPreview";
 import getProducts from "@/components/getProducts";
 
 export const dynamicParams = true;
-export const PER_PAGE = 5;
+const PER_PAGE = 5;
 
-type PageProps = {
-  products: any[];
-  currentPage: number;
-  totalProducts: number;
-};
-
-const productPaging = async (props: any) => {
-  const page = Number(props?.page) || 1;
+const productPaging = async () => {
+  const page = 1;
   const { products, total } = await getProducts({ limit: PER_PAGE, page });
 
   if (!products.length) {
@@ -26,11 +18,11 @@ const productPaging = async (props: any) => {
   return {
     products,
     totalProducts: total,
-    currentPage: page,
+    currentPage: 1,
   };
 };
-async function PaginatedPage(props: any) {
-  const { products, currentPage, totalProducts } = await productPaging(props);
+export default async function PaginatedPage(props: any) {
+  const { products, currentPage, totalProducts } = await productPaging();
 
   const postPreviews = products?.map((post) => (
     <PostPreview key={post.slug} {...post} />
@@ -50,7 +42,5 @@ async function PaginatedPage(props: any) {
   );
 }
 export const generateStaticParams = async () => {
-  return Array.from({ length: 5 }).map((_, i) => `/blog/${i + 2}`);
+  return [{ temp: "list" }, { temp: "grid" }];
 };
-
-export default PaginatedPage;
