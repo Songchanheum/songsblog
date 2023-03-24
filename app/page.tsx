@@ -23,9 +23,9 @@ const HomePage = async () => {
             <Link href={`/posts/${post.slug}`}>
               <div
                 key={i}
-                className="grid grid-cols-5 grid-flow-row gap-2 border-b p-2 border-gray-300"
+                className="grid grid-cols-3 grid-flow-row gap-2 border-b p-2 border-gray-300"
               >
-                <p className="pr-1 col-span-4 text-left text-slate-800">
+                <p className="pr-1 col-span-2 text-left text-slate-800">
                   {post.title}
                 </p>
                 <p className="text-slate-400 text-right text-sm">{post.date}</p>

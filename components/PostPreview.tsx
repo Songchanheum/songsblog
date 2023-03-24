@@ -19,7 +19,11 @@ const PostPreview = (props: PostMetadata) => {
         <div className="hidden md:flex row-span-2 md:col-span-2 ">
           <Image
             alt=""
-            src={`/images/baseImage/${props.baseimage}`}
+            src={
+              props.baseimage
+                ? `/images/baseImage/${props.baseimage}`
+                : "/images/baseImage/no-image.png"
+            }
             width={120}
             height={68}
           />
