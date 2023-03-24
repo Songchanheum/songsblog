@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "../styles/globals.css";
 import IntroduceMenu from "@/components/IntroduceMenu";
+import { TbHandClick } from "react-icons/tb";
 
 export const metadata = {
   title: "Song`s Blog",
@@ -16,7 +17,10 @@ export default function RootLayout({
     <header>
       <div className="text-center bg-slate-700 p-8 mt-6 rounded-md">
         <div className="group relative mt-4 mb-3 flex justify-center">
-          <h1 className="text-2xl text-white font-bold ">Song's Blog</h1>
+          <h1 className="inline-flex text-2xl text-white font-bold ">
+            Song's Blog
+            <TbHandClick size="33" className="pt-2 text-violet-300" />
+          </h1>
           <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-left text-xs text-white group-hover:scale-100">
             ✨ 7년차 WEB 개발자
             <br />✨ 3년차 Front-end 개발자
@@ -41,8 +45,8 @@ export default function RootLayout({
   );
   return (
     <html lang="en">
-      <body>
-        <div className="mx-auto md:max-w-2xl lg:max-w-4xl px-6">
+      <body className="scrollbar-hide">
+        <div className="rounded-sm mx-auto md:max-w-2xl lg:max-w-4xl px-6 bg-white opacity-90">
           {header}
           {children}
           {footer}
