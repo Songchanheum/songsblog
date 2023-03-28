@@ -28,7 +28,7 @@ const PostPreview = (props: PostMetadata) => {
             height={68}
           />
         </div>
-        <h2 className="md:col-span-6 text-xl mt-5 mb-3 lg:col-span-8 font-bold text-violet-600">
+        <h2 className="md:col-span-6 md:text-xl text-lg mt-5 mb-3 lg:col-span-8 font-bold text-gray-800">
           {props.title}
         </h2>
         <p className="lg:col-span-6 md:col-span-4 text-slate-600 mb-3">
