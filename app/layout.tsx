@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="text-center bg-slate-700 p-8 mt-6 rounded-md">
+      <div className="text-center bg-slate-700 p-12">
         <div className="group relative mt-4 mb-3 flex justify-center">
           <h1 className="inline-flex text-2xl text-white font-bold ">
             Song's Blog
@@ -46,8 +46,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="scrollbar-hide">
-        <div className="rounded-sm mx-auto md:max-w-2xl lg:max-w-4xl px-6 bg-white opacity-90">
-          {header}
+        {header}
+        <div className="rounded-sm mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-5xl px-6 bg-white opacity-90">
           {children}
           {footer}
         </div>
