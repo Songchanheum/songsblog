@@ -25,10 +25,12 @@ const HomePage = async () => {
                 key={i}
                 className="grid grid-cols-3 grid-flow-row gap-2 border-b p-2 border-gray-300"
               >
-                <p className="pr-1 col-span-2 text-left text-slate-800">
+                <p className="pr-1 col-span-2 text-left font-bold text-gray-700 hover:underline decoration-double decoration-violet-400 truncate">
                   {post.title}
                 </p>
-                <p className="text-slate-400 text-right text-sm">{post.date}</p>
+                <p className="text-slate-400 text-right text-sm truncate">
+                  {post.date}
+                </p>
               </div>
             </Link>
           );
