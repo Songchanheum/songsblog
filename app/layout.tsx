@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="text-center bg-slate-700 p-12">
+      <div className="text-center bg-gradient-to-t to-slate-800 from-gray-600 p-12">
         <div className="group relative mt-4 mb-3 flex justify-center">
           <h1 className="inline-flex text-2xl text-white font-bold ">
             Song's Blog
