@@ -1,7 +1,6 @@
-import Link from "next/link";
-import "../styles/globals.css";
 import IntroduceMenu from "@/components/IntroduceMenu";
 import { TbHandClick } from "react-icons/tb";
+import "../styles/globals.css";
 
 export const metadata = {
   title: "Song`s Blog",
@@ -15,13 +14,13 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="text-center bg-gradient-to-t to-slate-800 from-gray-600 p-12">
+      <div className="bg-gradient-to-t from-gray-600 to-slate-800 p-12 text-center">
         <div className="group relative mt-4 mb-3 flex justify-center">
-          <h1 className="inline-flex text-3xl text-white font-bold ">
+          <h1 className="inline-flex text-3xl font-bold text-white ">
             Song's Blog
             <TbHandClick size="33" className="pt-2 text-violet-300" />
           </h1>
-          <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-left text-xs text-white group-hover:scale-100">
+          <span className="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-left text-xs text-white transition-all group-hover:scale-100">
             ✨ 7년차 WEB 개발자
             <br />✨ 3년차 Front-end 개발자
             <br />✨ (주)알티모빌리티 근무 중
@@ -29,7 +28,7 @@ export default function RootLayout({
             있습니다.
           </span>
         </div>
-        <p className="text-slate-300 text-xs sm:text-sm">
+        <p className="text-xs text-slate-300 sm:text-sm">
           송찬흠의 Dev Blog 입니다! (2021-08 ~ 진행중)
         </p>
       </div>
@@ -38,7 +37,7 @@ export default function RootLayout({
   );
   const footer = (
     <footer>
-      <div className="border-t border-slate-400 mt-8 py-6 text-center text-slate-400">
+      <div className="mt-8 border-t border-slate-400 py-6 text-center text-slate-400">
         <h3>Developed by Chanheum Song</h3>
       </div>
     </footer>
@@ -47,7 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="scrollbar-hide">
         {header}
-        <div className="rounded-sm mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-5xl px-6 bg-white opacity-90">
+        <div className="mx-auto rounded-sm bg-white px-6 opacity-90 md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
           {children}
           {footer}
         </div>

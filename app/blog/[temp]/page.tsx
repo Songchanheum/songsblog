@@ -40,13 +40,13 @@ export default async function PaginatedPage(props: any) {
   ));
   return (
     <div>
-      <div className="text-right mb-1">
+      <div className="mb-1 text-right">
         <Link href={`/blog/list/${props.params.page}`}>
           <button
             className={
               tempState === "list"
-                ? "bg-gray-400 p-2 rounded-md mr-1"
-                : "bg-gray-300 p-2 rounded-md mr-1"
+                ? "mr-1 rounded-md bg-gray-400 p-2"
+                : "mr-1 rounded-md bg-gray-300 p-2"
             }
           >
             <FiList size="20" />
@@ -56,8 +56,8 @@ export default async function PaginatedPage(props: any) {
           <button
             className={
               tempState === "grid"
-                ? "bg-gray-400 p-2 rounded-md"
-                : "bg-gray-300 p-2 rounded-md"
+                ? "rounded-md bg-gray-400  p-2"
+                : "rounded-md bg-gray-300 p-2"
             }
           >
             <FiGrid size="20" />
@@ -66,7 +66,7 @@ export default async function PaginatedPage(props: any) {
       </div>
       <div
         className={
-          tempState === "grid" ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""
+          tempState === "grid" ? "grid grid-cols-1 gap-4 md:grid-cols-2" : ""
         }
       >
         {postPreviews}
