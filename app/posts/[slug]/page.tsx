@@ -11,6 +11,32 @@ export const generateStaticParams = async () => {
   }));
 };
 
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export function generateMetadata({ params, searchParams }: Props) {
+  console.log(params);
+  // read route params
+  const slug = params.slug;
+  const matterResult = getPostContent(slug);
+
+  return {
+    title: matterResult.data.title,
+    description: matterResult.data.subtitle,
+    openGraph: {
+      title: matterResult.data.title,
+      description: matterResult.data.subtitle,
+      url: `https://songsblog.vercel.app/posts/${slug}`,
+    },
+    twitter: {
+      title: matterResult.data.title,
+      description: matterResult.data.subtitle,
+    },
+  };
+}
+
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;
@@ -19,8 +45,8 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
-const PostPage = (props: any) => {
-  const slug = props.params.slug;
+const PostPage = ({ params, searchParams }: Props) => {
+  const slug = params.slug;
   const matterResult = getPostContent(slug);
   return (
     <p>
@@ -28,7 +54,7 @@ const PostPage = (props: any) => {
         <h1 className="text-center text-2xl font-bold text-violet-600 ">
           {matterResult.data.title}
         </h1>
-        <p className="mt-2 mb-3 text-slate-400">{matterResult.data.date}</p>
+        <p className="mb-3 mt-2 text-slate-400">{matterResult.data.date}</p>
         {matterResult.data.baseimage ? (
           <Image
             alt=""

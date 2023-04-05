@@ -7,11 +7,15 @@ export const metadata = {
   description: "Next Blog Page made by Chanheum Song",
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: 'Song`s Blog',
-    description: 'Next Blog Page made by Chanheum Song',
-    url: 'https://songsblog.vercel.app/',
-    siteName: 'songsblog',
-    type: 'website'
+    title: "Song`s Blog",
+    description: "Next Blog Page made by Chanheum Song",
+    url: "https://songsblog.vercel.app/",
+    siteName: "vercle.app",
+    type: "website",
+  },
+  twitter: {
+    title: "Song`s Blog",
+    description: "Next Blog Page made by Chanheum Song",
   },
   robots: {
     index: false,
@@ -21,11 +25,11 @@ export const metadata = {
       index: true,
       follow: false,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-  }
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +40,7 @@ export default function RootLayout({
   const header = (
     <header>
       <div className="bg-gradient-to-t from-gray-600 to-slate-800 p-12 text-center">
-        <div className="group relative mt-4 mb-3 flex justify-center">
+        <div className="group relative mb-3 mt-4 flex justify-center">
           <h1 className="inline-flex text-3xl font-bold text-white ">
             Song's Blog
             <TbHandClick size="33" className="pt-2 text-violet-300" />
