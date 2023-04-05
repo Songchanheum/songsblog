@@ -17,8 +17,6 @@ type Props = {
 };
 
 export function generateMetadata({ params, searchParams }: Props) {
-  console.log(params);
-  // read route params
   const slug = params.slug;
   const matterResult = getPostContent(slug);
 
@@ -51,7 +49,7 @@ const PostPage = ({ params, searchParams }: Props) => {
   return (
     <p>
       <div className="my-12 text-center">
-        <h1 className="text-center text-2xl font-bold text-violet-600 ">
+        <h1 className="text-center text-2xl font-bold text-violet-600 md:text-3xl lg:text-4xl">
           {matterResult.data.title}
         </h1>
         <p className="mb-3 mt-2 text-slate-400">{matterResult.data.date}</p>
