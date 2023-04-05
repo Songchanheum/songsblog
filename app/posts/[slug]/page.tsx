@@ -41,7 +41,7 @@ const PostPage = (props: any) => {
           ""
         )}
       </div>
-      <article className="prose max-w-none lg:prose-lg xl:prose-xl">
+      <article className="prose max-w-none lg:prose-lg">
         <Markdown>{matterResult.content}</Markdown>
       </article>
     </p>
