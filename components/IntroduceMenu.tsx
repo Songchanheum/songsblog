@@ -1,18 +1,18 @@
-import { FiHome, FiInstagram, FiGithub } from "react-icons/fi";
-import { MdComputer } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
+import { FiGithub, FiHome, FiInstagram } from "react-icons/fi";
+import { MdComputer } from "react-icons/md";
 
 const IntroduceMenu = () => {
   return (
     <>
-      <div className="hidden md:flex flex-start bg-gray-100 p-2 mb-3 rounded-md">
+      <div className="flex-start mb-3 hidden rounded-md bg-gray-100 p-2 md:flex">
         <Link href={`/`}>
           <button
             type="button"
-            className="rounded-lg text-sm ml-3 mt-1 items-center"
+            className="ml-3 mt-1 items-center rounded-lg text-sm"
           >
-            <FiHome size="30" />
+            <FiHome size="25" />
           </button>
         </Link>
         <Link
@@ -21,7 +21,7 @@ const IntroduceMenu = () => {
         >
           <button
             type="button"
-            className="inline-flex items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-5 py-1.5 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <MdComputer size="22" className="mr-2" />
             Portfolio
@@ -30,7 +30,7 @@ const IntroduceMenu = () => {
         <Link href={"https://career.programmers.co.kr/pr/softsch1_9949"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-programmers hover:bg-programmers-hover border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-programmers px-5 py-1.5 text-sm font-medium text-white hover:bg-programmers-hover focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <Image
               alt=""
@@ -45,7 +45,7 @@ const IntroduceMenu = () => {
         <Link href={`https://github.com/Songchanheum`}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-gray-900 hover:bg-black border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-gray-900 px-5 py-1.5 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <FiGithub size="22" className="mr-2" />
             Github
@@ -54,18 +54,18 @@ const IntroduceMenu = () => {
         <Link href={"https://www.instagram.com/songch_/"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-pink-400 hover:bg-pink-500 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-pink-400 px-5 py-1.5 text-sm font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <FiInstagram size="22" className="mr-2" />
             Instagram
           </button>
         </Link>
       </div>
-      <div className="flex md:hidden flex-start bg-gray-100 p-2 mb-6 rounded-md">
+      <div className="flex-start mb-6 flex rounded-md bg-gray-100 p-2 md:hidden">
         <Link href={`/`}>
           <button
             type="button"
-            className="rounded-lg text-sm ml-3 mt-1 items-center"
+            className="ml-3 mt-1 items-center rounded-lg text-sm"
           >
             <FiHome size="30" />
           </button>
@@ -76,7 +76,7 @@ const IntroduceMenu = () => {
         >
           <button
             type="button"
-            className="inline-flex items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <MdComputer size="22" />
           </button>
@@ -84,7 +84,7 @@ const IntroduceMenu = () => {
         <Link href={"https://career.programmers.co.kr/pr/softsch1_9949"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-programmers hover:bg-programmers-hover border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-programmers px-3 py-1.5 text-sm font-medium text-white hover:bg-programmers-hover focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <Image alt="" src="/programmers.png" width={22} height={22} />
           </button>
@@ -92,7 +92,7 @@ const IntroduceMenu = () => {
         <Link href={`https://github.com/Songchanheum`}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-gray-900 hover:bg-black border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-gray-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <FiGithub size="22" />
           </button>
@@ -100,7 +100,7 @@ const IntroduceMenu = () => {
         <Link href={"https://www.instagram.com/songch_/"}>
           <button
             type="button"
-            className="inline-flex items-center text-white bg-pink-400 hover:bg-pink-500 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
+            className="inline-flex items-center rounded-lg border border-gray-200 bg-pink-400 px-3 py-1.5 text-sm font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-4 focus:ring-gray-100"
           >
             <FiInstagram size="22" />
           </button>
