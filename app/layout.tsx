@@ -1,5 +1,4 @@
 import IntroduceMenu from "@/components/IntroduceMenu";
-import { TbHandClick } from "react-icons/tb";
 import "../styles/globals.css";
 
 export const metadata = {
@@ -31,7 +30,10 @@ export const metadata = {
     },
   },
 };
-
+const splash_html = `
+<iframe id="splash_iframe" class="border-none w-full h-52 absolute" src="/js/splash/boids/boids.html" scrolling="no" style="top: 0px;">
+</iframe>
+`;
 export default function RootLayout({
   children,
 }: {
@@ -39,19 +41,12 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div className="bg-gradient-to-t from-gray-600 to-slate-800 p-12 text-center">
-        <div className="group relative mb-3 mt-4 flex justify-center">
-          <h1 className="inline-flex text-3xl font-bold text-white ">
+      <div className="bg-gradient-to-t from-gray-600 to-slate-800 pb-12 text-center overflow-hidden w-full h-52">
+        <div dangerouslySetInnerHTML={{ __html: splash_html }} ></div>
+        <div className="mb-3 mt-16 flex justify-center">
+          <h1 className="inline-flex text-5xl font-bold text-white ">
             Song's Blog
-            <TbHandClick size="33" className="pt-2 text-violet-300" />
           </h1>
-          <span className="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-left text-xs text-white transition-all group-hover:scale-100">
-            ✨ 7년차 WEB 개발자
-            <br />✨ 3년차 Front-end 개발자
-            <br />✨ (주)알티모빌리티 근무 중
-            <br />✨ 이 Blog Web은 NextJS/Typescript 와 TailwindCSS 로 구성되어
-            있습니다.
-          </span>
         </div>
         <p className="text-xs text-slate-300 sm:text-sm">
           송찬흠의 Dev Blog 입니다! (2021-08 ~ 진행중)
