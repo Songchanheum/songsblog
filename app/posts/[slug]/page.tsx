@@ -65,11 +65,12 @@ const PostPage = ({ params, searchParams }: Props) => {
           ""
         )}
       </div>
-      <article className="prose max-w-none lg:prose-lg">
-        <Markdown>{matterResult.content}</Markdown>
+      <article className="prose max-w-none lg:prose-lg xl:prose-xl">
+        <Markdown options={{ forceBlock: true, wrapper: "article" }}>
+          {matterResult.content}
+        </Markdown>
       </article>
     </p>
   );
 };
-
 export default PostPage;
