@@ -45,7 +45,7 @@ export default function RootLayout({
         <div dangerouslySetInnerHTML={{ __html: splash_html }} ></div>
         <div className="mb-3 mt-16 flex justify-center">
           <h1 className="inline-flex text-5xl font-bold text-white ">
-            Song's Blog
+            <img src="/images/common/profiles.png" width='50px' height='50px'/>Song's Blog
           </h1>
         </div>
         <p className="text-xs text-slate-300 sm:text-sm">
